@@ -194,7 +194,7 @@ main{
 
 
 footer{
-    background-color:var(--bgfoot) ;
+    background-color: #053565;
     height: 4.2em;
     color: var(--textColor);
     /* position: fixed; */
@@ -208,7 +208,7 @@ footer{
     align-items: center;
 
     & a{
-        border: 1px solid var(--textColor);
+        border: 0px solid var(--textColor);
         border-radius: 5px;
         text-decoration: none;
         color:var(--textColor);

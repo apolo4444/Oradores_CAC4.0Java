@@ -1,0 +1,325 @@
+:root {
+  --DarkGrey: rgb(54, 57, 65);
+  --DarkGreen: rgb(23, 161, 92);
+  --BrightGreen: rgb(24, 190, 107);
+  --GreyGreen: rgb(20, 62, 82);
+  --textWhite: white;
+  --textDark: rgb(34, 34, 34);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none !important;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--textDark);
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  background-color: var(--DarkGrey) !important;
+  color: var(--textWhite) !important;
+  display: flex;
+  justify-content: center;
+}
+
+.header-nav {
+  background-color: var(--DarkGrey) !important;
+  color: var(--textWhite) !important;
+  width: 90vw;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  font-size: large;
+  font-weight: 500;
+}
+.header-logo img {
+  height: 60px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px !important;
+}
+nav ul li {
+  padding: 10px;
+  font-size: medium;
+}
+nav ul li:hover {
+  color: var(--DarkGreen);
+}
+
+section {
+  margin: 2em 0;
+}
+
+.hero-banner {
+  position: relative;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.hero-banner .palacio-conferencia-image {
+  background: url("../Assets/Images/ba1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+  filter: brightness(50%);
+}
+@media screen and (max-width: 900px) {
+  .hero-banner .contenido-hero-banner {
+    position: absolute;
+    padding: 2em;
+    width: 90vw;
+    top: 15vw;
+    right: 5vw;
+    text-align: center;
+    color: var(--textWhite);
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 900px) {
+  .hero-banner .contenido-hero-banner {
+    position: absolute;
+    padding: 2em;
+    width: 45vw;
+    top: 25vh;
+    right: 5vw;
+    text-align: right;
+    color: var(--textWhite);
+  }
+}
+.hero-banner h1 {
+  font-size: xx-large;
+  font-weight: 500;
+}
+.hero-banner p {
+  margin: 1em 0 3em 0;
+  font-size: medium;
+  line-height: 1.6;
+}
+
+.boton-transparente {
+  background-color: transparent;
+  border: 1px var(--textWhite);
+  border-style: solid;
+  border-radius: 5px;
+  padding: 0.8em;
+  color: var(--textWhite);
+  font-size: medium;
+}
+
+.boton-verde {
+  background-color: var(--BrightGreen);
+  border: 1px var(--textWhite);
+  border-style: solid;
+  border-radius: 5px;
+  padding: 0.8em;
+  color: var(--textWhite);
+  font-size: medium;
+}
+
+.fuente-small {
+  font-size: small !important;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.display-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.presentando-buenos-aires {
+  margin-top: 2rem;
+  background-color: var(--DarkGrey);
+  color: var(--textWhite);
+  min-height: 40vh;
+  display: flex;
+}
+.presentando-buenos-aires .buenos-aires-image {
+  background: url("../Images/ba3.jpg");
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position: center;
+  width: 50vw;
+}
+.presentando-buenos-aires .texto-buenos-aires {
+  width: 45vw;
+  padding: 2em 2em 2em 1em;
+}
+
+@media screen and (max-width: 700px) {
+  .presentando-buenos-aires {
+    display: flex;
+    flex-direction: column;
+  }
+  .presentando-buenos-aires .buenos-aires-image {
+/*    background: url("../Images/ba3.jpg");
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: center;*/
+    width: 50vw;
+    height: 50vh;
+  }
+  .presentando-buenos-aires .texto-buenos-aires {
+    padding: 2em 1em;
+    text-align: center;
+    width: 100vw;
+  }
+}
+.seccion-formulario {
+  max-width: 700px;
+  margin: 1em auto;
+}
+.seccion-formulario .boton-enviar {
+  width: 100%;
+  padding: 5px;
+}
+.seccion-formulario .decorated {
+  text-decoration: underline !important;
+}
+
+footer {
+  background-color: var(--GreyGreen);
+  color: var(--textWhite);
+  display: flex;
+  justify-content: center;
+}
+footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+  margin: 1em;
+}
+footer ul li {
+  padding: 10px;
+  font-size: medium;
+}
+@media screen and (max-width: 900px) {
+  footer ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80vw;
+    margin: 1em;
+    padding-left: 0px;
+  }
+  footer ul li {
+    padding: 10px;
+    font-size: medium;
+  }
+}
+
+
+.ticket-categorias-wrap{
+  display: flex;
+  max-width: inherit;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ticket-categorias{
+  border: solid;
+  margin:3px;
+  padding:20px 10px;  
+  border-width:2px;
+}
+.ticket-categorias p{
+  margin:10px 0px;
+}
+
+.estudiante{
+  border-color: rgb(120, 181, 250);
+}
+.trainee{
+  border-color: rgb(94, 212, 71);
+}
+.junior{
+  border-color: rgb(219, 230, 126);
+}
+
+
+.total{
+  background-color: #accfed;
+  border-radius: 2px;
+  padding: 10px 20px;
+  text-align: left;
+  margin: 30px 0px 20px 0px;
+}
+
+.errorInput {
+  border: 1px solid red;
+}
+
+
+/*# sourceMappingURL=index.css.map */
+
+
+
+/*Fotos deslizando*/
+
+.slider{
+    width: 100%;
+    /* height: 500px; */
+    /* margin-top: 50px; */
+    overflow: hidden;
+    margin-left: -50PX;
+}
+
+.slider__pic{
+    display: flex;
+    animation: carrousel 20s infinite alternate linear;
+    width: 400%;
+}
+
+.slider__images{
+    width: 100%;
+    list-style: none;
+}
+
+.slider img{
+    width: 100%;
+    height: 100%;
+}
+
+/*animacion carrousel*/
+@keyframes carrousel{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+

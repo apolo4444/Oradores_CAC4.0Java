@@ -1,6 +1,7 @@
-<!doctype html>
-<html lang="en">
-
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
 <head>
   <title>Comprar Tickets</title>
   <!-- Required meta tags -->
@@ -15,9 +16,9 @@
     <link rel="stylesheet" href="../CSS/style2.css">
     <link rel="shortcut icon" href="../Assets/Images/codoacodo.png" type="image/x-icon">
 </head>
-
 <body>
-  <header>
+
+	 <header>
     <div class="logo">
         <img src="../Assets/Images/codoacodo.png" alt="Imagen por defecto">
         <h2>Conf BS AS</h2>
@@ -31,23 +32,6 @@
     </nav>
   </header>
   <main>
-<!-- 
-    <section class="principal">
-        <img src="../Assets/Images/ba1.jpg" alt="Palacions de las Aguas de Buenos Aires" srcset="">
-
-        <div class="content-principal">
-        <h1> Conf BS AS</h1>
-        <p> Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra 
-            comunidad el conocimiento y experiencia de los expertos que estan creando el 
-            futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes de
-            Codo a Codo y los oradores de primer nivel que tenemos para ti.
-            Te esperamos!  
-        </p>
-        <a href="#conviertete">Quiero ser Orador</a>
-        <a class="btn-color" href="tickets.html"> Comprar tickets</a>
-        </div>
-        
-    </section> -->
 
   </main>
 
@@ -56,21 +40,21 @@
     <div id="oradores" class="item-1">
 
         <div class="content-card2">
-          <div class="card-1 borderEstudiante">
+            <div class="card-1 border">
                 <h2>Estudiante </h2>
                 <p>Tienen un descuento </p>
                 <b>80%</b>
                 <p>*Presentar documentacion</p>
             </div>
     
-            <div class="card-2 borderTrainee">
+            <div class="card-2 border">
                 <h2>Trainee </h2>
                 <p>Tienen un descuento </p>
                 <b>50%</b>
                 <p>*Presentar documentacion</p>
             </div>
     
-            <div class="card-3 borderJunior">
+            <div class="card-3 border">
                 <h2>Junior</h2>
                 <p>Tienen un descuento </p>
                 <b>15%</b>
@@ -86,42 +70,49 @@
             <h2>VALOR DEL TICKET $200</h2>
             
         </div>
-        <form  action="CargarForm.jsp">
-            <input type="text" id="nombre" name= "nombre" placeholder="Nombre" size="32px"  required>
-            <input type="text" id="apellido" name= "apellido" placeholder="Apellido" size="32px" required>
+        
+        <form  action="Update.jsp">
+            <input type="text" id="nombre" name= "nombre"  value="<%= request.getParameter("nombre")%>" placeholder="Nombre" size="32px"  required>
+            <input type="text" id="apellido" name= "apellido" value="<%= request.getParameter("apellido")%>" placeholder="Apellido" size="32px" required>
             <br>
-            <input type="text" id="mail" name="mail" placeholder="@hotmail.com" size="70px" required>
+            <input type="text" id="mail" name="mail" value="<%= request.getParameter("mail")%>" placeholder="@hotmail.com" size="70px" required>
            <div class="filas">
             <div class="columnas">
               <label for="cantidad">Cantidad</label>
            
-            <input type="number" id="cantidad" name="cantidad" placeholder="Cantidad" required>
+            <input type="number" id="cantidad" name="cantidad" value="<%= request.getParameter("cantidad")%>" placeholder="Cantidad" required>
             </div>
             
             <div class="columnas">
               <label for="categoria" width="50%">Categoria</label>
            
-              <!-- <input type="text" id="categoria" placeholder="Categoria" required> -->
-              <select id="categoria" class="form-select m-2" name="categoria" aria-label="Default select example">
-                <option selected="">--Seleccione--</option>
-                <option value="0">Sin categorÃ­a</option>
-                <option value="1">Estudiante</option>
-                <option value="2">Trainee</option>
-                <option value="3">Junior</option>
+             
+              <select  id="categoria" name="categoria" width="50%">
+                      <option selected><%= request.getParameter("categoria")%></option>
+                      <option value="0">Sin categoría</option>
+                      <option value="1">Estudiante</option>
+                      <option value="2">Traineer</option>
+                      <option value="3">Junior</option>
+      
               </select>
             </div>
 
            </div>
 
+           
+           
             <br>
             <h4 class="monto" id="totalPagar">$Total a pagar </h4>
             <br>
             <brdiv class="enLinea">
-              <button class="boton botonDecorado" id="btnClear" type="reset">Borrar</button>
-              <button class="boton botonDecorado" id="btnResumen" type="button">Resumen</button>
+              <button class="boton botonDecorado" id="btnClear"  onclick="location.href='Delete.jsp'" type="button">Delete</button>
+              <button class="boton botonDecorado" id="btnConfirmar"  type="button">Confirmar</button>
               </br>
        
-              <button class="boton botonDecorado" id="btnResumen" type="submit">Comprar</button>
+              <button class="boton botonDecorado" id="btnResumen" type="submit">Modificar</button>
+              </br>
+       
+              <button class="boton botonDecorado" id="btnResumen" type="button" onclick="location.href='MostrarCompras.jsp'">Mostrar Compra</button>
             </div>
             
         </form>
@@ -151,7 +142,10 @@
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
 
-  <script src="../JS/main.js"></script>
+  <script src="../JS/confirmar.js"></script>
+  
+  
 </body>
 
+</body>
 </html>
