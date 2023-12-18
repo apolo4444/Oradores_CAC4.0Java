@@ -89,9 +89,10 @@ try {
 	out.print("Se cargaron los datos");
 	
 
+	response.sendRedirect("./tickets.html");
 %>
 
-<jsp:include page="tickets.html"></jsp:include>
+
 
 </body>
 </html>

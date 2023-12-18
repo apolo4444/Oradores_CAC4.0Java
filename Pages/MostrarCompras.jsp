@@ -5,10 +5,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+  <title>Compras Hechas</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/style2.css">
+    <link rel="shortcut icon" href="../Assets/Images/codoacodo.png" type="image/x-icon">
 </head>
 <body>
+
+<header>
+    <div class="logo">
+        <img src="../Assets/Images/codoacodo.png" alt="Imagen por defecto">
+        <h2>Conf BS AS</h2>
+    </div>
+    <nav>
+        <a href="../index.html">La Conferencia</a>
+        <a href="../index.html">Los Oradores</a>
+        <a href="../index.html">El lugar y la fecha</a>
+        <a href="../index.html">Conviertete en Orador</a>
+        <a class="tickets" href="../index.html">Regresar</a>
+    </nav>
+  </header>
 
 <%
 
@@ -47,18 +71,25 @@
 	
 %>
 
+<div class="grid-content">
 
-<table>
+    <div id="oradores" class="item-4">
+
+<div class="title">
+	<h1>Tabla de Compras</h1>
+	</div>
+
+<table class="table">
 
 	<thead>
 		<tr>
 		
-		<td>Id</td>
-		<td>Nombre</td>
-		<td>Apellido</td>
-		<td>Email</td>
-		<td>Cantidad</td>
-		<td>Categoria</td>
+		<th scope="col">Id</th>
+		<th scope="col">Nombre</th>
+		<th scope="col">Apellido</th>
+		<th scope="col">Email</th>
+		<th scope="col">Cantidad</th>
+		<th scope="col">Categoria</th>
 			
 		</tr>
 		
@@ -106,6 +137,31 @@
 
 
 </table>
+
+</div>
+</div>
+
+
+<footer>
+    <nav>
+        <a href="#">Preguntas frecuentes</a>
+        <a href="#">Contactanos</a>
+        <a href="#">Prensa</a>
+        <a href="#">Conferencias</a>
+        <a href="#">Terminos y condiciones</a>
+        <a href="#">Privacidad</a>
+        <a href="#">Estudiantes</a>
+    </nav>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
 
 </body>
 </html>

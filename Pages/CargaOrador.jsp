@@ -46,11 +46,11 @@
             throwables.printStackTrace();
         }
 
-	
+	response.sendRedirect("../index.html#formularioOrador");
 
 %>
 
-<jsp:include page="tickets.html"></jsp:include>
+<!--<jsp:include page="tickets.html"></jsp:include>-->
 
 </body>
 </html>

@@ -48,6 +48,7 @@
 			if(usuario.equals(rs.getString(1)) && contraseña.equals(rs.getString(2))){
 				
 				exito=true;
+				break;
 				
 			}else{
 				exito=false;
@@ -64,14 +65,9 @@
 	System.out.println(exito);	
 	if(exito){
 
-		%>
-		<jsp:include page="tickets.html"></jsp:include> 
-		<% 
+		response.sendRedirect("./tickets.html");
 	}else{
-		%>
-		<jsp:include page="../index.html"></jsp:include>
-		<%--<%@include file="../index.html" %> --%>
-		<% 
+		response.sendRedirect("../index.html");
 	}
 	
 try {

@@ -68,10 +68,10 @@ try {
 
 	out.print("Se cargaron los datos");
 	
-
+	response.sendRedirect("./Tickets.jsp");
 %>
 
-<jsp:include page="Tickets.jsp"></jsp:include>
+
 
 </body>
 </html>
